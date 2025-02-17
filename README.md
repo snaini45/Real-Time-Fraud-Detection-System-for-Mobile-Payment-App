@@ -1,97 +1,51 @@
-# Real-Time-Fraud-Detection-System-for-Mobile-Payment-App
+﻿Real-Time Fraud Detection System
+
 Overview
+This project implements a real-time fraud detection system for mobile payment transactions using machine learning models.
 
-The Real-Time Fraud Detection System is designed to identify and prevent fraudulent transactions in a mobile payment application using machine learning models and real-time data processing techniques.
+The system leverages a Random Forest model trained on credit card transaction data and deploys a real-time prediction pipeline using Kafka.
 
-Objectives
+📂 Project Structure:
+- `requirements.txt` - Python dependencies
+- `data_preprocessing.py` - Data preprocessing script
+- `model_training.py` - Model training script
+- `real_time_pipeline.py` - Real-time prediction pipeline
+- `utils.py` - Utility functions
+- `charts/` - Visual charts from the dataset
+- `.gitignore` - Ignore unnecessary files
 
-Detect Fraudulent Transactions: Use machine learning algorithms to classify transactions as legitimate or fraudulent.
 
-Real-Time Analysis: Implement a streaming pipeline for real-time detection and alerts.
+🚀 Instructions to Run the Project
+1. Install dependencies:**  
+   pip install -r requirements.txt
 
-Model Evaluation: Compare different models and select the most effective one for fraud detection.
+2. Run data preprocessing:
+   python data_preprocessing.py
+ 
 
-Scalability: Ensure the system can handle high transaction volumes.
+3. Train the model:
+   python model_training.py
+   
+4.Start the real-time prediction pipeline:
+   python real_time_pipeline.py
 
-Datasets
 
-Transaction Dataset: Contains details of transactions including amount, time, location, and user behavior.
 
-Fraud Labels: Historical data labeling transactions as fraudulent or non-fraudulent.
+ 📊 Visualizations
+Class Distribution (Legit vs Fraud)
+Pair Plot of V1, V2, V3 Features
 
-Tools and Libraries
 
-Python libraries: Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow
+⚙️ Dependencies
+- Python 3.8+
+- Pandas
+- Numpy
+- Scikit-learn
+- Matplotlib
+- Joblib
+- Kafka-python
 
-Machine Learning Models: Logistic Regression, Random Forest, XGBoost, LSTM
 
-Streaming Tools: Apache Kafka, Spark Streaming
-
-Database: MongoDB or PostgreSQL
-
-Methodology
-
-1. Data Preprocessing:
-
-Clean and preprocess transaction data.
-
-Handle imbalanced datasets using techniques like SMOTE.
-
-Feature engineering to extract behavioral patterns.
-
-2. Exploratory Data Analysis (EDA):
-
-Analyze transaction patterns using statistical and visual techniques.
-
-Identify common features of fraudulent transactions.
-
-3. Model Development:
-
-Train different machine learning models (Logistic Regression, Random Forest, XGBoost, LSTM).
-
-Use cross-validation to evaluate model performance.
-
-Optimize hyperparameters using grid search.
-
-4. Real-Time Detection Pipeline:
-
-Integrate Apache Kafka for real-time data ingestion.
-
-Use Spark Streaming to process transactions in real time.
-
-Implement alerts for suspicious transactions.
-
-5. Model Evaluation:
-
-Use metrics such as Accuracy, Precision, Recall, F1-score, and AUC-ROC.
-
-Compare the performance of different models and select the best one.
-
-Key Findings and Results
-
-Best Model: Identified the model with the highest accuracy and lowest false positives.
-
-Real-Time Performance: Achieved efficient detection with minimal latency.
-
-Scalability: The system successfully handled high transaction throughput.
-
-Conclusion
-
-The Real-Time Fraud Detection System effectively detects fraudulent transactions, providing real-time alerts and ensuring secure mobile payments. This project demonstrates the application of machine learning and streaming technologies in the fintech domain.
-
-Future Work
-
-Integrate anomaly detection techniques for zero-day fraud patterns.
-
-Implement a feedback loop for model improvement.
-
-Expand the system to support multiple payment platforms.
-
-Appendices
-
-Datasets: Description and structure of the datasets used.
-
-Code: Jupyter notebooks containing the implementation of data preprocessing, EDA, model development, and real-time detection pipeline.
-
-Results: Detailed evaluation metrics and visualizations of the detection outcomes.
+📜 License
+This project is licensed under the MIT License.
 
